@@ -4,7 +4,7 @@
 #include <set>
 using namespace std;
 
-int main() {
+/*int main() {
     string start_word, end_word;
     cout << "start word: ";
     cin >> start_word;
@@ -42,4 +42,4 @@ int main() {
     }
 
     return 0;
-}
+}*/

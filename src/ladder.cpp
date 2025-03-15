@@ -58,20 +58,20 @@ bool one_edit(const string& s1, const string& s2) {
     }
 }
 
-bool edit_distance_within(const string& str1, const string& str2, int d) {
+bool edit_distance_within(const string& s1, const string& s2, int d) {
+    if (s1 == s2) {
+        return true; 
+    } 
     if (d == 0) {
-        return str1 == str2;
+        return false;
     }
     if (d == 1) {
-        return one_edit(str1, str2);
+        return one_edit(s1, s2);
     }
     return false;
 }
 
 bool is_adjacent(const string& word1, const string& word2) {
-    if (word1 == word2) {
-        return false;
-    }
     return edit_distance_within(word1, word2, 1);
 }
 
