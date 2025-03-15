@@ -22,7 +22,7 @@ vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& prev
     int n = G.numVertices;
     vector<int> dist(n, INF);
     vector<bool> visited(n, false);
-    previous.resize(n, -1);
+    previous.assign(n, -1);
     dist[source] = 0;
     priority_queue<Node, vector<Node>, compareNode> pq;
     pq.push({source, 0});
